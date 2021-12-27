@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/oscuro"
+    android:layout_height="match_parent"
+    tools:context=".ui.LozaFragment">
+
+    <CheckBox
+        android:id="@+id/cb_loza_clasica"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="Loza Clasica"
+        android:background="@color/white"
+        android:padding="6dp"
+        android:textColor="@color/black"
+        android:layout_margin="30dp"
+        app:layout_constraintEnd_toStartOf="@+id/gl_0.50"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <CheckBox
+        android:id="@+id/cb_loza_vigueta"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_margin="30dp"
+        android:background="@color/white"
+        android:text="Loza Viguetas"
+        android:padding="6dp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/gl_0.50"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/black"
+        android:padding="8dp"
+        android:text="Calcular Loza"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="27sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_mt2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:background="@color/claro"
+        android:hint="Largo a Trabajar"
+        android:padding="6dp"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cb_loza_clasica" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_0.50"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.50" />
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="8dp"
+        android:backgroundTint="@color/rojo"
+        android:text="cancel"
+        app:layout_constraintEnd_toStartOf="@+id/gl_0.50"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_mt2" />
+
+    <Button
+        android:id="@+id/bt_calcular"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="8dp"
+        android:enabled="false"
+        android:text="calcular"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/gl_0.50"
+        app:layout_constraintTop_toBottomOf="@+id/et_mt2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/medio"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_mt2"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

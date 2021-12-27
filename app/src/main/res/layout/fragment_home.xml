@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.HomeFragment">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="211dp"
+            android:layout_marginBottom="28dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/fondo" />
+
+        <Button
+            android:id="@+id/presupuestos"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_margin="8dp"
+            android:backgroundTint="@color/oscuro"
+            android:text="presupuestos"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+        <Button
+            android:id="@+id/calculos_mt2"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_margin="8dp"
+            android:backgroundTint="@color/oscuro"
+            android:text="sacar mt2"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+        <Button
+            android:id="@+id/costo_material"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_margin="8dp"
+            android:backgroundTint="@color/oscuro"
+            android:text="costo material"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+        <Button
+            android:id="@+id/calculo_escalera"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_margin="8dp"
+            android:backgroundTint="@color/oscuro"
+            android:text="calcular escalera"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+        <Button
+            android:id="@+id/calculo_estructura"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_margin="8dp"
+            android:backgroundTint="@color/oscuro"
+            android:text="calculos estructura"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+        <Button
+            android:id="@+id/calculos_paredes"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_margin="8dp"
+            android:backgroundTint="@color/oscuro"
+            android:text="calculo paredes"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/oscuro"
+    android:orientation="vertical"
+    tools:context=".ui.SacarMt2Fragment">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:background="@color/black"
+        android:padding="8dp"
+        android:text="Calcular Paredes en Mt2"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="27dp" />
+
+    <EditText
+        android:id="@+id/et_lado_a"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="8dp"
+        android:background="@color/white"
+        android:hint="Lado -A- mas largo encontrado"
+        android:inputType="number"
+        android:padding="6dp"
+        android:textColorHint="@color/black" />
+
+    <EditText
+        android:id="@+id/et_lado_b"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="8dp"
+        android:background="@color/white"
+        android:hint="Lado -B- mas largo encontrado"
+        android:inputType="number"
+        android:padding="6dp"
+        android:textColorHint="@color/black" />
+
+    <EditText
+        android:id="@+id/et_alto"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="8dp"
+        android:background="@color/white"
+        android:hint="Alto de la habitacion"
+        android:inputType="number"
+        android:padding="6dp"
+        android:textColorHint="@color/black" />
+
+    <TextView
+        android:id="@+id/tv_resultado"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="35dp"
+        android:background="@color/claro"
+        android:text="0.0 Metros de Trabajo"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="22sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bt_borrar"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_margin="16dp"
+            android:backgroundTint="#ff0000"
+            android:text="Borrar"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/bt_calcular"
+            android:layout_width="150dp"
+            android:layout_height="53dp"
+            android:layout_margin="16dp"
+            android:enabled="false"
+            android:text="calcular"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.calculosdeobra20.ui.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_presupuestosFragment"
+            app:destination="@id/presupuestosFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_sacarMt2Fragment"
+            app:destination="@id/sacarMt2Fragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_costoMaterialFragment"
+            app:destination="@id/costoMaterialFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_calcularEscaleraFragment"
+            app:destination="@id/calcularEscaleraFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_calcularEstructuraFragment"
+            app:destination="@id/calcularEstructuraFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_calcularParedesFragment"
+            app:destination="@id/calcularParedesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/presupuestosFragment"
+        android:name="com.example.calculosdeobra20.ui.PresupuestosFragment"
+        android:label="fragment_presupuestos"
+        tools:layout="@layout/fragment_presupuestos" >
+        <action
+            android:id="@+id/action_presupuestosFragment_to_respuestaPresupuestoFragment"
+            app:destination="@id/respuestaPresupuestoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sacarMt2Fragment"
+        android:name="com.example.calculosdeobra20.ui.SacarMt2Fragment"
+        android:label="fragment_sacar_mt2"
+        tools:layout="@layout/fragment_sacar_mt2" />
+    <fragment
+        android:id="@+id/costoMaterialFragment"
+        android:name="com.example.calculosdeobra20.ui.CostoMaterialFragment"
+        android:label="fragment_costo_material"
+        tools:layout="@layout/fragment_costo_material" >
+        <action
+            android:id="@+id/action_costoMaterialFragment_to_costoPinturaFragment"
+            app:destination="@id/costoPinturaFragment" />
+        <action
+            android:id="@+id/action_costoMaterialFragment_to_costoRevoqueFragment"
+            app:destination="@id/costoRevoqueFragment" />
+        <action
+            android:id="@+id/action_costoMaterialFragment_to_costoHormigonFragment"
+            app:destination="@id/costoHormigonFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/calcularEscaleraFragment"
+        android:name="com.example.calculosdeobra20.ui.CalcularEscaleraFragment"
+        android:label="fragment_calcular_escalera"
+        tools:layout="@layout/fragment_calcular_escalera" >
+        <action
+            android:id="@+id/action_calcularEscaleraFragment_to_resultadoEscaleraFragment"
+            app:destination="@id/resultadoEscaleraFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/calcularEstructuraFragment"
+        android:name="com.example.calculosdeobra20.ui.CalcularEstructuraFragment"
+        android:label="fragment_calcular_estructura"
+        tools:layout="@layout/fragment_calcular_estructura" >
+        <action
+            android:id="@+id/action_calcularEstructuraFragment_to_lozaFragment"
+            app:destination="@id/lozaFragment" />
+        <action
+            android:id="@+id/action_calcularEstructuraFragment_to_columnasFragment"
+            app:destination="@id/columnasFragment" />
+        <action
+            android:id="@+id/action_calcularEstructuraFragment_to_vigasFragment"
+            app:destination="@id/vigasFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/calcularParedesFragment"
+        android:name="com.example.calculosdeobra20.ui.CalcularParedesFragment"
+        android:label="fragment_calcular_paredes"
+        tools:layout="@layout/fragment_calcular_paredes" >
+        <action
+            android:id="@+id/action_calcularParedesFragment_to_ladrillosFragment"
+            app:destination="@id/ladrillosFragment" />
+        <action
+            android:id="@+id/action_calcularParedesFragment_to_construccionSecaFragment"
+            app:destination="@id/construccionSecaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/costoPinturaFragment"
+        android:name="com.example.calculosdeobra20.ui.CostoPinturaFragment"
+        android:label="fragment_costo_pintura"
+        tools:layout="@layout/fragment_costo_pintura" />
+    <fragment
+        android:id="@+id/costoRevoqueFragment"
+        android:name="com.example.calculosdeobra20.ui.CostoRevoqueFragment"
+        android:label="fragment_costo_revoque"
+        tools:layout="@layout/fragment_costo_revoque" />
+    <fragment
+        android:id="@+id/costoHormigonFragment"
+        android:name="com.example.calculosdeobra20.ui.CostoHormigonFragment"
+        android:label="fragment_costo_hormigon"
+        tools:layout="@layout/fragment_costo_hormigon" />
+    <fragment
+        android:id="@+id/respuestaPresupuestoFragment"
+        android:name="com.example.calculosdeobra20.ui.RespuestaPresupuestoFragment"
+        android:label="fragment_respuesta_presupuesto"
+        tools:layout="@layout/fragment_respuesta_presupuesto" />
+    <fragment
+        android:id="@+id/resultadoEscaleraFragment"
+        android:name="com.example.calculosdeobra20.ui.ResultadoEscaleraFragment"
+        android:label="fragment_resultado_escalera"
+        tools:layout="@layout/fragment_resultado_escalera" />
+    <fragment
+        android:id="@+id/lozaFragment"
+        android:name="com.example.calculosdeobra20.ui.LozaFragment"
+        android:label="fragment_loza"
+        tools:layout="@layout/fragment_loza" >
+        <action
+            android:id="@+id/action_lozaFragment_to_lozaClasicaFragment"
+            app:destination="@id/lozaClasicaFragment" />
+        <action
+            android:id="@+id/action_lozaFragment_to_lozaViguetasFragment"
+            app:destination="@id/lozaViguetasFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/lozaClasicaFragment"
+        android:name="com.example.calculosdeobra20.ui.LozaClasicaFragment"
+        android:label="fragment_loza_clasica"
+        tools:layout="@layout/fragment_loza_clasica" />
+    <fragment
+        android:id="@+id/lozaViguetasFragment"
+        android:name="com.example.calculosdeobra20.ui.LozaViguetasFragment"
+        android:label="fragment_loza_viguetas"
+        tools:layout="@layout/fragment_loza_viguetas" />
+    <fragment
+        android:id="@+id/columnasFragment"
+        android:name="com.example.calculosdeobra20.ui.ColumnasFragment"
+        android:label="fragment_columnas"
+        tools:layout="@layout/fragment_columnas" />
+    <fragment
+        android:id="@+id/vigasFragment"
+        android:name="com.example.calculosdeobra20.ui.VigasFragment"
+        android:label="fragment_vigas"
+        tools:layout="@layout/fragment_vigas" />
+    <fragment
+        android:id="@+id/ladrillosFragment"
+        android:name="com.example.calculosdeobra20.ui.LadrillosFragment"
+        android:label="fragment_ladrillos"
+        tools:layout="@layout/fragment_ladrillos" />
+    <fragment
+        android:id="@+id/construccionSecaFragment"
+        android:name="com.example.calculosdeobra20.ui.ConstruccionSecaFragment"
+        android:label="fragment_construccion_seca"
+        tools:layout="@layout/fragment_construccion_seca" />
+</navigation>
