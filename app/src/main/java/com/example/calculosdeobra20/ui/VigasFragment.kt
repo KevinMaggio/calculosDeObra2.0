@@ -10,7 +10,6 @@ import com.example.calculosdeobra20.R
 
 class VigasFragment : Fragment() {
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
