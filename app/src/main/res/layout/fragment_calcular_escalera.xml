@@ -24,13 +24,14 @@
     <EditText
         android:id="@+id/et_largo"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="6dp"
         android:layout_marginTop="30dp"
         android:layout_marginRight="6dp"
         android:background="@color/claro"
+        android:inputType="number"
         android:hint="Largo a Trabajar"
-        android:padding="6dp"
+        android:padding="12dp"
         android:textColorHint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,17 +40,34 @@
     <EditText
         android:id="@+id/et_alto"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="6dp"
         android:layout_marginTop="30dp"
         android:layout_marginRight="6dp"
         android:background="@color/claro"
+        android:inputType="number"
         android:hint="Alto a Trabajar"
-        android:padding="6dp"
+        android:padding="12dp"
         android:textColorHint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_largo" />
+
+    <EditText
+        android:id="@+id/et_ancho"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/claro"
+        android:hint="Ancho a Trabajar"
+        android:padding="12dp"
+        android:inputType="number"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginTop="30dp"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_alto" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gl_0.50"
@@ -59,6 +77,7 @@
         app:layout_constraintGuide_percent="0.50" />
 
     <Button
+        android:id="@+id/bt_borrar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
@@ -70,6 +89,7 @@
         app:layout_constraintTop_toBottomOf="@+id/et_alto" />
 
     <Button
+        android:id="@+id/bt_calcular"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
