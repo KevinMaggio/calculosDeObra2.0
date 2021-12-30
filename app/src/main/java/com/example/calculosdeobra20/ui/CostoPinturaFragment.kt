@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.core.widget.doAfterTextChanged
 import androidx.fragment.app.activityViewModels
 import com.example.calculosdeobra20.R
@@ -17,6 +18,7 @@ class CostoPinturaFragment : Fragment() {
 
     lateinit var binding: FragmentCostoPinturaBinding
     val costoMaterialViewModel by activityViewModels<CostoMaterialViewModel>()
+    var pase= true
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -35,7 +37,13 @@ class CostoPinturaFragment : Fragment() {
         })
 
         binding.btCalcular.setOnClickListener {
-            costoMaterialViewModel.calculoPintura(binding.etMt2.text.toString().toDouble().toInt())
+            checkNumber(binding.etMt2.text.toString())
+
+            if (pase) {
+                costoMaterialViewModel.calculoPintura(
+                    binding.etMt2.text.toString().toDouble().toInt()
+                )
+            }
         }
 
         costoMaterialViewModel.liveValidarPintura.observe(viewLifecycleOwner, {
@@ -52,6 +60,20 @@ class CostoPinturaFragment : Fragment() {
             )
         }
         return binding.root
+    }
+    fun checkNumber(valor: String) {
+        try {
+            valor.toInt()
+
+        }catch (e : NumberFormatException){
+            mesageError()
+            binding.btCalcular.isEnabled = false
+            pase = false
+        }
+    }
+
+    fun mesageError() {
+        Toast.makeText(context, "Error en la escritura de Datos", Toast.LENGTH_LONG).show()
     }
 
     fun limpiarCampos() {

@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.core.widget.doAfterTextChanged
 import androidx.fragment.app.activityViewModels
 import com.example.calculosdeobra20.R
@@ -17,6 +18,8 @@ class CostoHormigonFragment : Fragment() {
 
     val costoMaterialViewModel by activityViewModels<CostoMaterialViewModel>()
     lateinit var binding: FragmentCostoHormigonBinding
+    var pase = true
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -35,12 +38,20 @@ class CostoHormigonFragment : Fragment() {
         })
 
         binding.btCalcular.setOnClickListener {
-            costoMaterialViewModel.calculoHormigon(
-                binding.etLadoA.text.toString().toDouble(),
-                binding.etLadoB.text.toString().toDouble(),
-                binding.twAlto.text.toString().toDouble()
-            )
+
+            checkNumber(binding.etLadoA.text.toString())
+            checkNumber(binding.etLadoB.text.toString())
+            checkNumber(binding.twAlto.text.toString())
+
+            if (pase) {
+                costoMaterialViewModel.calculoHormigon(
+                    binding.etLadoA.text.toString().toDouble(),
+                    binding.etLadoB.text.toString().toDouble(),
+                    binding.twAlto.text.toString().toDouble()
+                )
+            }
         }
+
         binding.btBorrar.setOnClickListener {
             limpiarPantalla()
         }
@@ -74,6 +85,20 @@ class CostoHormigonFragment : Fragment() {
 
         return binding.root
 
+    }
+    fun checkNumber(valor: String) {
+        try {
+            valor.toInt()
+
+        }catch (e : NumberFormatException){
+            mesageError()
+            binding.btCalcular.isEnabled = false
+            pase = false
+        }
+    }
+
+    fun mesageError() {
+        Toast.makeText(context, "Error en la escritura de Datos", Toast.LENGTH_LONG).show()
     }
 
     fun limpiarPantalla() {

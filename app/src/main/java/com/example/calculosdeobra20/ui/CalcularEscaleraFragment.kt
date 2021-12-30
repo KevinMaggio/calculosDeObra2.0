@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.core.widget.doAfterTextChanged
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
@@ -16,6 +17,7 @@ class CalcularEscaleraFragment : Fragment() {
 
     lateinit var binding: FragmentCalcularEscaleraBinding
     val calcularEscaleraViewModel by activityViewModels<CalcularEscaleraViewModel>()
+    var pase= true
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -23,36 +25,45 @@ class CalcularEscaleraFragment : Fragment() {
     ): View {
         binding = FragmentCalcularEscaleraBinding.inflate(inflater, container, false)
 
+        //desactivar boton al volver
+        calcularEscaleraViewModel.liveVerificacionBoton.postValue(false)
 
         binding.btCalcular.setOnClickListener {
-            calcularEscaleraViewModel.calcularEscalera(
-                binding.etAlto.toString().toDouble(),
-                binding.etLargo.toString().toDouble(),
-                binding.etAncho.toString().toDouble()
-            )
-            findNavController().navigate(R.id.action_calcularEscaleraFragment_to_resultadoEscaleraFragment)
+            checkNumber(binding.etAlto.text.toString())
+            checkNumber(binding.etLargo.text.toString())
+            checkNumber(binding.etAncho.text.toString())
+
+            if (pase) {
+                calcularEscaleraViewModel.calcularEscalera(
+                    binding.etAlto.text.toString().toDouble(),
+                    binding.etLargo.text.toString().toDouble(),
+                    binding.etAncho.text.toString().toDouble()
+                )
+                findNavController().navigate(R.id.action_calcularEscaleraFragment_to_resultadoEscaleraFragment)
+            }
         }
+
         calcularEscaleraViewModel.liveVerificacionBoton.observe(viewLifecycleOwner, {
             binding.btCalcular.isEnabled= it
         })
         binding.etAlto.doAfterTextChanged {
             calcularEscaleraViewModel.verificarBoton(
                 it.toString(),
-                binding.etAncho.toString(),
-                binding.etLargo.toString()
+                binding.etAncho.text.toString(),
+                binding.etLargo.text.toString()
             )
         }
         binding.etLargo.doAfterTextChanged {
             calcularEscaleraViewModel.verificarBoton(
-                binding.etAlto.toString(),
+                binding.etAlto.text.toString(),
                 it.toString(),
-                binding.etAncho.toString()
+                binding.etAncho.text.toString()
             )
         }
         binding.etAncho.doAfterTextChanged {
             calcularEscaleraViewModel.verificarBoton(
-                binding.etAncho.toString(),
-                binding.etAlto.toString(),
+                binding.etAncho.text.toString(),
+                binding.etAlto.text.toString(),
                 it.toString()
             )
         }
@@ -63,6 +74,20 @@ class CalcularEscaleraFragment : Fragment() {
         return binding.root
     }
 
+    fun checkNumber(valor: String) {
+        try {
+            valor.toInt()
+
+        }catch (e : NumberFormatException){
+            mesageError()
+            binding.btCalcular.isEnabled = false
+            pase = false
+        }
+    }
+
+    fun mesageError() {
+        Toast.makeText(context, "Error en la escritura de Datos", Toast.LENGTH_LONG).show()
+    }
     fun limpiar(){
         binding.etAncho.text.clear()
         binding.etLargo.text.clear()
