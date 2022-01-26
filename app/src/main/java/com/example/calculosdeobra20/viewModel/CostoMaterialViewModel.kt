@@ -25,7 +25,12 @@ class CostoMaterialViewModel : ViewModel() {
     }
 
     fun calculoRevoque(mt2: Int) {
-        val mt2Final = mt2 * 0.02
+        val mt2Final = mt2 * 0.025
+        val cemento= mt2Final * 3.5
+        val arena= mt2Final * 0.8
+        val cal= mt2Final * 7
+        liveRevoque.postValue(Revoque(cemento,arena,cal))
+
 
     }
 

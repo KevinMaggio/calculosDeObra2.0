@@ -30,9 +30,7 @@ class HomeFragment : Fragment() {
         binding.calculoEscalera.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_calcularEscaleraFragment)
         }
-        binding.calculoEstructura.setOnClickListener {
-            findNavController().navigate(R.id.action_homeFragment_to_calcularEstructuraFragment)
-        }
+
         binding.calculosParedes.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_calcularParedesFragment)
         }

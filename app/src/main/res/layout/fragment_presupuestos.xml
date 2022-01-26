@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient_light_blue"
     tools:context=".ui.PresupuestosFragment">
 
     <LinearLayout
@@ -20,7 +21,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="32dp"
-            android:background="@color/oscuro"
+            android:background="@drawable/gradient_title"
             android:text="Calcular Presupuesto"
             android:textAlignment="center"
             android:padding="6dp"
@@ -30,7 +31,10 @@
         <EditText
             android:id="@+id/mt_realizar"
             android:layout_width="match_parent"
+            android:textColorHint="@color/black"
             android:layout_height="wrap_content"
+            android:background="@drawable/corner_edit_text"
+            android:padding="10dp"
             android:layout_margin="8dp"
             android:hint="Metros cuadrados a realizar"
             android:inputType="number" />
@@ -38,6 +42,9 @@
         <EditText
             android:id="@+id/precio_mt"
             android:layout_width="match_parent"
+            android:textColorHint="@color/black"
+            android:background="@drawable/corner_edit_text"
+            android:padding="10dp"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:hint="Precio del MT2"
@@ -46,6 +53,9 @@
         <EditText
             android:id="@+id/tiempo"
             android:layout_width="match_parent"
+            android:textColorHint="@color/black"
+            android:background="@drawable/corner_edit_text"
+            android:padding="10dp"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:hint="Tiempo de trabajo"
@@ -98,7 +108,10 @@
         <EditText
             android:id="@+id/viaje"
             android:layout_width="match_parent"
+            android:textColorHint="@color/black"
             android:layout_height="wrap_content"
+            android:background="@drawable/corner_edit_text"
+            android:padding="10dp"
             android:layout_margin="8dp"
             android:hint="Viaje en KM"
             android:inputType="number" />
@@ -106,6 +119,9 @@
         <EditText
             android:id="@+id/precio_combustible"
             android:layout_width="match_parent"
+            android:background="@drawable/corner_edit_text"
+            android:textColorHint="@color/black"
+            android:padding="10dp"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:hint="Precio del Lts de combustible "
@@ -117,20 +133,23 @@
             android:gravity="center"
             android:orientation="horizontal">
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/bt_borrar"
                 android:layout_width="150dp"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
                 android:layout_margin="16dp"
-                android:backgroundTint="#ff0000"
+                android:background="@drawable/background_cancel"
                 android:text="Borrar" />
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/bt_calcular"
                 android:layout_width="150dp"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
                 android:layout_margin="16dp"
+                android:textColor="@color/white"
                 android:enabled="false"
+                android:background="@drawable/state_button"
                 android:text="calcular" />
 
         </LinearLayout>

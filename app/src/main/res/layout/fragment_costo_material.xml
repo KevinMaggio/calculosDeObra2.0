@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/oscuro"
+    android:background="@drawable/gradient_light_blue"
     tools:context=".ui.CostoMaterialFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -14,9 +14,10 @@
         <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
             android:layout_margin="3dp"
-            android:background="@color/black"
+            android:background="@drawable/gradient_title"
             android:gravity="center"
             android:text="Ver Costo De..."
             android:textAlignment="center"

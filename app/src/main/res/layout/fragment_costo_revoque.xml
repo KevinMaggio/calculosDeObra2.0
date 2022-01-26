@@ -3,18 +3,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/oscuro"
+    android:background="@drawable/gradient_light_blue"
     android:orientation="vertical"
     tools:context=".ui.CostoRevoqueFragment">
 
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_margin="3dp"
-        android:background="@color/black"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_title"
         android:gravity="center"
-        android:padding="6dp"
+        android:padding="8dp"
         android:text="Calculo de Revoque"
         android:textAlignment="center"
         android:textColor="@color/white"
@@ -28,7 +27,7 @@
         android:layout_marginTop="30dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:background="@color/white"
+        android:background="@drawable/corner_edit_text"
         android:hint="Mt2 a Realizar"
         android:inputType="number"
         android:padding="6dp"
@@ -42,20 +41,22 @@
         android:gravity="center"
         android:orientation="horizontal">
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/bt_borrar"
             android:layout_width="150dp"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:backgroundTint="#ff0000"
+            android:textColor="@color/white"
+            android:background="@drawable/background_cancel"
             android:text="Borrar" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/bt_calcular"
             android:layout_width="150dp"
-            android:layout_height="53dp"
+            android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:enabled="false"
+            android:background="@drawable/state_button"
             android:text="calcular"
             android:textColor="@color/white" />
 
@@ -64,6 +65,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
         android:background="@color/medio"
         android:orientation="vertical">
 
@@ -76,7 +78,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:background="@color/oscuro"
+                android:background="@drawable/gradient_title"
                 android:padding="6dp"
                 android:text="Cemento  "
                 android:textColor="@color/white"
@@ -87,7 +89,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:background="@color/oscuro"
+                android:background="@drawable/gradient_title"
                 android:padding="6dp"
                 android:text="0"
                 android:textColor="@color/white"
@@ -103,7 +105,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:background="@color/oscuro"
+                android:background="@drawable/gradient_title"
                 android:padding="6dp"
                 android:text="Arena  "
                 android:textColor="@color/white"
@@ -114,7 +116,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:background="@color/oscuro"
+                android:background="@drawable/gradient_title"
                 android:padding="6dp"
                 android:text="0"
                 android:textColor="@color/white"
@@ -130,34 +132,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:background="@color/oscuro"
-                android:padding="6dp"
-                android:text="Hidrofugo  "
-                android:textColor="@color/white"
-                android:textSize="21sp" />
-
-            <TextView
-                android:id="@+id/tw_hidrofugo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:background="@color/oscuro"
-                android:padding="6dp"
-                android:text="0"
-                android:textColor="@color/white"
-                android:textSize="21sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:background="@color/oscuro"
+                android:background="@drawable/gradient_title"
                 android:padding="6dp"
                 android:text="Cal  "
                 android:textColor="@color/white"
@@ -168,7 +143,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:background="@color/oscuro"
+                android:background="@drawable/gradient_title"
                 android:padding="6dp"
                 android:text="0"
                 android:textColor="@color/white"

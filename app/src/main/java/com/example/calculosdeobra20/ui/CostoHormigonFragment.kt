@@ -88,7 +88,8 @@ class CostoHormigonFragment : Fragment() {
     }
     fun checkNumber(valor: String) {
         try {
-            valor.toInt()
+            valor.toDouble()
+            pase = true
 
         }catch (e : NumberFormatException){
             mesageError()

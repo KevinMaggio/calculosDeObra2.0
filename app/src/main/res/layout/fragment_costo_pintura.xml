@@ -4,17 +4,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/oscuro"
+    android:background="@drawable/gradient_light_blue"
     tools:context=".ui.CostoPinturaFragment">
 
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
         android:layout_margin="3dp"
-        android:background="@color/black"
+        android:background="@drawable/gradient_title"
         android:gravity="center"
-        android:padding="6dp"
+        android:padding="8dp"
         android:text="Calculo de Pintura"
         android:textAlignment="center"
         android:textColor="@color/white"
@@ -28,7 +28,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:inputType="number"
-        android:background="@color/white"
+        android:background="@drawable/corner_edit_text"
         android:hint="Mt2 a Realizar"
         android:padding="6dp"
         android:textColorHint="@color/black"
@@ -41,19 +41,21 @@
         android:gravity="center"
         android:orientation="horizontal">
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/bt_borrar"
             android:layout_width="150dp"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:backgroundTint="#ff0000"
+            android:textColor="@color/white"
+            android:background="@drawable/background_cancel"
             android:text="Borrar" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/bt_calcular"
             android:layout_width="150dp"
-            android:layout_height="53dp"
+            android:layout_height="wrap_content"
             android:layout_margin="16dp"
+            android:background="@drawable/state_button"
             android:enabled="false"
             android:text="calcular"
             android:textColor="@color/white" />
@@ -74,7 +76,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:background="@color/oscuro"
+                android:background="@drawable/gradient_title"
                 android:padding="6dp"
                 android:text="Pintura a utilizar  "
                 android:textColor="@color/white"
@@ -85,7 +87,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:background="@color/oscuro"
+                android:background="@drawable/gradient_title"
                 android:padding="6dp"
                 android:text="0"
                 android:textColor="@color/white"

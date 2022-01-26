@@ -76,9 +76,15 @@ class CalcularEscaleraFragment : Fragment() {
 
     fun checkNumber(valor: String) {
         try {
-            valor.toInt()
-
-        }catch (e : NumberFormatException){
+            valor.toDouble()
+            if (valor.toDouble() > 0) {
+                pase = true
+            } else {
+                pase = false
+                mesageError()
+                binding.btCalcular.isEnabled = false
+            }
+        } catch (e: NumberFormatException) {
             mesageError()
             binding.btCalcular.isEnabled = false
             pase = false
