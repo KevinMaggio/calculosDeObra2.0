@@ -22,7 +22,6 @@ class RespuestaPresupuestoFragment : Fragment() {
 
         binding= FragmentRespuestaPresupuestoBinding.inflate(inflater, container, false)
 
-
         presupuestoViewModel.liveDevaluacion.observe(viewLifecycleOwner,{
             binding.presupuestoDevaluacion.text= it.toString()
         })

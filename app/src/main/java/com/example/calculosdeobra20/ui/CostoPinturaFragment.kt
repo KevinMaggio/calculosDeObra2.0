@@ -18,7 +18,6 @@ class CostoPinturaFragment : Fragment() {
 
     lateinit var binding: FragmentCostoPinturaBinding
     val costoMaterialViewModel by activityViewModels<CostoMaterialViewModel>()
-    var pase= true
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -37,13 +36,10 @@ class CostoPinturaFragment : Fragment() {
         })
 
         binding.btCalcular.setOnClickListener {
-            checkNumber(binding.etMt2.text.toString())
 
-            if (pase) {
                 costoMaterialViewModel.calculoPintura(
                     binding.etMt2.text.toString().toDouble().toInt()
                 )
-            }
         }
 
         costoMaterialViewModel.liveValidarPintura.observe(viewLifecycleOwner, {
@@ -60,26 +56,6 @@ class CostoPinturaFragment : Fragment() {
             )
         }
         return binding.root
-    }
-    fun checkNumber(valor: String) {
-        try {
-            valor.toDouble()
-            if (valor.toDouble() > 0) {
-                pase = true
-            } else {
-                pase = false
-                mesageError()
-                binding.btCalcular.isEnabled = false
-            }
-        } catch (e: NumberFormatException) {
-            mesageError()
-            binding.btCalcular.isEnabled = false
-            pase = false
-        }
-    }
-
-    fun mesageError() {
-        Toast.makeText(context, "Error en la escritura de Datos", Toast.LENGTH_LONG).show()
     }
 
     fun limpiarCampos() {

@@ -37,6 +37,9 @@ class HomeFragment : Fragment() {
         binding.costoMaterial.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_costoMaterialFragment)
         }
+        binding.misTrabajos.setOnClickListener {
+            Toast.makeText(context, "Sector En Construccion", Toast.LENGTH_LONG).show()
+        }
 
         return binding.root
     }

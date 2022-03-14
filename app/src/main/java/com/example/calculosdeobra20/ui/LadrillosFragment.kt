@@ -17,7 +17,6 @@ class LadrillosFragment : Fragment() {
 
     private lateinit var binding : FragmentLadrillosBinding
     val paredesViewModel by activityViewModels<ParedesViewModel>()
-    var pase = true
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -27,14 +26,10 @@ class LadrillosFragment : Fragment() {
         paredesViewModel.liveVerifyError.postValue(false)
         clear()
 
-
         binding.btCalcular.setOnClickListener {
-            checkNumber(binding.etMt2.text.toString())
-            if (pase) {
                 paredesViewModel.calculoParedHueco(binding.etMt2.text.toString().toDouble())
-            }
-
         }
+
         binding.btCancel.setOnClickListener {
             clear()
         }
@@ -55,26 +50,6 @@ class LadrillosFragment : Fragment() {
 
         return binding.root
     }
-    fun checkNumber(valor: String) {
-        try {
-            valor.toDouble()
-            if (valor.toDouble() > 0) {
-                pase = true
-            } else {
-                pase = false
-                mesageError()
-                binding.btCalcular.isEnabled = false
-            }
-        } catch (e: NumberFormatException) {
-            mesageError()
-            binding.btCalcular.isEnabled = false
-            pase = false
-        }
-    }
-
-    fun mesageError() {
-        Toast.makeText(context, "Error en la escritura de Datos", Toast.LENGTH_LONG).show()
-    }
 
     fun clear(){
         binding.etMt2.text.clear()
@@ -82,6 +57,5 @@ class LadrillosFragment : Fragment() {
         binding.twCal.text="0"
         binding.twCemento.text="0"
         binding.twArena.text="0"
-
     }
 }

@@ -17,7 +17,7 @@ class PresupuestoViewModel : ViewModel() {
     }
 
     private fun evaluarCombustible(km: Int, precioCombustible: Int, dias: Int): Int {
-        val resul = (((km * 2) * dias) * precioCombustible)/7
+        val resul = (((km * 2) * dias) * precioCombustible) / 7
         liveCombustible.postValue(resul)
         return resul
     }
@@ -36,17 +36,29 @@ class PresupuestoViewModel : ViewModel() {
     ) {
         if (precio.isNotEmpty() && metros.isNotEmpty() && km
                 .isNotEmpty() && precioCombustible.isNotEmpty() && dias
-                .isNotEmpty()
+                .isNotEmpty() && checkNumber(precio) && checkNumber(metros) && checkNumber(km) && checkNumber(
+                precioCombustible
+            ) && checkNumber(dias)
         ) {
             liveValidarBoton.postValue(true)
         } else {
             liveValidarBoton.postValue(false)
         }
-
     }
-    fun presupuestoConDevaluacion(meses: Double){
-        val devaluacion = meses *0.04
 
-        livePresupuestoTotal.let {  liveDevaluacion.postValue((devaluacion * it.value!!.toDouble() + it.value!!).toInt()) }
+    fun presupuestoConDevaluacion(meses: Double) {
+        val devaluacion = meses * 0.04
+
+        livePresupuestoTotal.let { liveDevaluacion.postValue((devaluacion * it.value!!.toDouble() + it.value!!).toInt()) }
     }
+
+    fun checkNumber(valor: String): Boolean {
+        return try {
+            valor.toDouble()
+            valor.toDouble() >= 0
+        } catch (e: NumberFormatException) {
+            false
+        }
+    }
+
 }

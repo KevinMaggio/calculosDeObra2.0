@@ -13,10 +13,19 @@ class ParedesViewModel : ViewModel(){
 
     fun calculoParedHueco(mt2: Double) {
         val material = mt2 * 0.009
-        val ladrillos = 12 * mt2
-        livepared.postValue( Pared(material *3,material *2, material * 7, ladrillos ))
+        val ladrillos = 15 * mt2
+        livepared.postValue( Pared(material *8,material *2, material * 15, ladrillos ))
     }
     fun validarBoton(valor: String){
-        liveVerifyError.postValue(!valor.isNullOrEmpty())
+        liveVerifyError.postValue(!valor.isNullOrEmpty() && checkNumber(valor))
+    }
+
+    fun checkNumber(valor: String): Boolean {
+        return try {
+            valor.toDouble()
+            valor.toDouble() >= 0
+        } catch (e: NumberFormatException) {
+            false
+        }
     }
 }

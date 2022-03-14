@@ -26,9 +26,9 @@ class CostoMaterialViewModel : ViewModel() {
 
     fun calculoRevoque(mt2: Int) {
         val mt2Final = mt2 * 0.025
-        val cemento= mt2Final * 3.5
-        val arena= mt2Final * 0.8
-        val cal= mt2Final * 7
+        val cemento= mt2Final * 5
+        val arena= mt2Final * 0.9
+        val cal= mt2Final * 9
         liveRevoque.postValue(Revoque(cemento,arena,cal))
 
 
@@ -39,7 +39,7 @@ class CostoMaterialViewModel : ViewModel() {
     }
 
     fun validarHormigon(ladoA: String, ladoB: String, alto: String) {
-        if (ladoA.isNotEmpty() && ladoB.isNotEmpty() && alto.isNotEmpty()) {
+        if (ladoA.isNotEmpty() && ladoB.isNotEmpty() && alto.isNotEmpty() && checkNumber(ladoA) && checkNumber(ladoB) && checkNumber(alto)) {
             liveValidarHormigon.postValue(true)
         } else {
             liveValidarHormigon.postValue(false)
@@ -47,7 +47,7 @@ class CostoMaterialViewModel : ViewModel() {
     }
 
     fun validarPintura(mt2: String) {
-        if (mt2.isNotEmpty()) {
+        if (mt2.isNotEmpty() && checkNumber(mt2)) {
             liveValidarPintura.postValue(true)
         } else {
             liveValidarPintura.postValue(false)
@@ -55,10 +55,18 @@ class CostoMaterialViewModel : ViewModel() {
     }
 
     fun validarRevoque(mt2: String) {
-        if (mt2.isNotEmpty()) {
+        if (mt2.isNotEmpty() && checkNumber(mt2)) {
             liveValidarRevoque.postValue(true)
         } else {
             liveValidarRevoque.postValue(false)
+        }
+    }
+    fun checkNumber(valor: String): Boolean {
+        return try {
+            valor.toDouble()
+            valor.toDouble() >= 0
+        } catch (e: NumberFormatException) {
+            false
         }
     }
 }

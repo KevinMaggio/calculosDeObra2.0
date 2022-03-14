@@ -60,7 +60,6 @@
             android:textColor="@color/white"
             android:textSize="17sp" />
 
-
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/calculos_paredes"
             android:layout_width="match_parent"
@@ -68,6 +67,16 @@
             android:layout_margin="8dp"
             android:background="@drawable/gradient_button_blue"
             android:text="calculo paredes"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/mis_trabajos"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/gradient_button_blue"
+            android:text="Mis Trabajos"
             android:textColor="@color/white"
             android:textSize="17sp" />
     </LinearLayout>

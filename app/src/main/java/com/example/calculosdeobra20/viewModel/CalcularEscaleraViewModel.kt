@@ -55,11 +55,18 @@ class CalcularEscaleraViewModel : ViewModel() {
     }
 
     fun verificarBoton(largo: String, alto: String, ancho: String) {
-        if (largo.isNotEmpty() && ancho.isNotEmpty() && alto.isNotEmpty()) {
+        if (largo.isNotEmpty() && ancho.isNotEmpty() && alto.isNotEmpty() && checkNumber(largo) && checkNumber(alto) && checkNumber(ancho) ){
             liveVerificacionBoton.postValue(true)
         } else {
             liveVerificacionBoton.postValue(false)
         }
     }
-
+    fun checkNumber(valor: String): Boolean {
+        return try {
+            valor.toDouble()
+            valor.toDouble() >= 0
+        } catch (e: NumberFormatException) {
+            false
+        }
+    }
 }
