@@ -28,6 +28,9 @@
         <action
             android:id="@+id/action_homeFragment_to_calcularParedesFragment"
             app:destination="@id/calcularParedesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_misTrabajosFragment"
+            app:destination="@id/misTrabajosFragment" />
     </fragment>
     <fragment
         android:id="@+id/presupuestosFragment"
@@ -161,4 +164,9 @@
         android:name="com.example.calculosdeobra20.ui.ConstruccionSecaFragment"
         android:label="fragment_construccion_seca"
         tools:layout="@layout/fragment_construccion_seca" />
+    <fragment
+        android:id="@+id/misTrabajosFragment"
+        android:name="com.example.calculosdeobra20.ui.MisTrabajosFragment"
+        android:label="fragment_mis_trabajos"
+        tools:layout="@layout/fragment_mis_trabajos" />
 </navigation>

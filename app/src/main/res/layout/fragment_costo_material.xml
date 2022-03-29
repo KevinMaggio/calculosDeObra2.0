@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/oscuro"
+    android:background="@drawable/gradient_light_blue"
     tools:context=".ui.CostoMaterialFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -14,10 +14,11 @@
         <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:layout_margin="3dp"
-            android:background="@color/black"
+            android:background="@drawable/gradient_title"
             android:gravity="center"
+            android:padding="8dp"
             android:text="Ver Costo De..."
             android:textAlignment="center"
             android:textColor="@color/white"
@@ -30,36 +31,36 @@
             android:id="@+id/iw_estructuras"
             android:layout_width="match_parent"
             android:layout_height="250dp"
-            android:scaleType="fitXY"
-            android:backgroundTint="@color/claro"
-            android:src="@drawable/estructuras"
             android:layout_marginTop="30dp"
+            android:backgroundTint="@color/claro"
+            android:scaleType="fitXY"
+            android:src="@drawable/estructuras"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
+
         <ImageButton
             android:id="@+id/iw_revoque"
             android:layout_width="match_parent"
             android:layout_height="250dp"
-            android:scaleType="fitXY"
-            android:backgroundTint="@color/claro"
-            android:src="@drawable/revoque"
             android:layout_marginTop="30dp"
+            android:backgroundTint="@color/claro"
+            android:scaleType="fitXY"
+            android:src="@drawable/revoque"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/iw_estructuras" />
+
         <ImageButton
             android:id="@+id/iw_pintura"
             android:layout_width="match_parent"
             android:layout_height="250dp"
-            android:scaleType="fitXY"
-            android:backgroundTint="@color/claro"
-            android:src="@drawable/pintura"
             android:layout_marginTop="30dp"
+            android:backgroundTint="@color/claro"
+            android:scaleType="fitXY"
+            android:src="@drawable/pintura"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/iw_revoque" />
-
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

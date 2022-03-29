@@ -4,16 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/oscuro"
+    android:background="@drawable/gradient_light_blue"
     tools:context=".ui.LadrillosFragment">
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="@color/black"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_title"
         android:padding="8dp"
-        android:text="Calcular Pared Ladrillo"
+        android:text="@string/calcular_pared_ladrillo"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="27sp"
@@ -24,13 +24,13 @@
     <EditText
         android:id="@+id/et_mt2"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="6dp"
         android:layout_marginTop="30dp"
         android:layout_marginRight="6dp"
-        android:background="@color/claro"
-        android:hint="Mt2 a Trabajar"
-        android:padding="6dp"
+        android:background="@drawable/corner_edit_text"
+        android:hint="@string/mt2_a_trabajar"
+        android:padding="8dp"
         android:inputType="number"
         android:textColorHint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
@@ -45,27 +45,31 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.50" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_cancel"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="30dp"
         android:layout_marginRight="8dp"
-        android:backgroundTint="@color/rojo"
-        android:text="cancel"
+        android:background="@drawable/background_cancel"
+        android:text="@string/cancel"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toStartOf="@+id/gl_0.50"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_mt2" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_calcular"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="30dp"
         android:layout_marginRight="8dp"
         android:enabled="false"
-        android:text="calcular"
-        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:background="@drawable/state_button"
+        android:text="@string/calcular"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/gl_0.50"
         app:layout_constraintTop_toBottomOf="@+id/et_mt2" />
@@ -73,13 +77,16 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/medio"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_mt2">
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -89,9 +96,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:background="@color/oscuro"
                 android:padding="6dp"
-                android:text="Cemento a utilizar  "
+                android:background="@drawable/gradient_title"
+                android:text="@string/cemento_a_utilizar"
                 android:textColor="@color/white"
                 android:textSize="21sp" />
 
@@ -100,7 +107,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:background="@color/oscuro"
+                android:background="@drawable/gradient_title"
                 android:padding="6dp"
                 android:text="0"
                 android:textColor="@color/white"
@@ -116,9 +123,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:background="@color/oscuro"
+                android:background="@drawable/gradient_title"
                 android:padding="6dp"
-                android:text="Arena a utilizar  "
+                android:text="@string/arena_a_utilizar"
                 android:textColor="@color/white"
                 android:textSize="21sp" />
 
@@ -127,7 +134,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:background="@color/oscuro"
+                android:background="@drawable/gradient_title"
                 android:padding="6dp"
                 android:text="0"
                 android:textColor="@color/white"
@@ -143,9 +150,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:background="@color/oscuro"
+                android:background="@drawable/gradient_title"
                 android:padding="6dp"
-                android:text="Ladrillo a utilizar  "
+                android:text="@string/ladrillo_a_utilizar"
                 android:textColor="@color/white"
                 android:textSize="21sp" />
 
@@ -154,7 +161,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:background="@color/oscuro"
+                android:background="@drawable/gradient_title"
                 android:padding="6dp"
                 android:text="0"
                 android:textColor="@color/white"
@@ -170,9 +177,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:background="@color/oscuro"
+                android:background="@drawable/gradient_title"
                 android:padding="6dp"
-                android:text="Cal a utilizar  "
+                android:text="@string/cal_a_utilizar"
                 android:textColor="@color/white"
                 android:textSize="21sp" />
 
@@ -181,7 +188,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:background="@color/oscuro"
+                android:background="@drawable/gradient_title"
                 android:padding="6dp"
                 android:text="0"
                 android:textColor="@color/white"

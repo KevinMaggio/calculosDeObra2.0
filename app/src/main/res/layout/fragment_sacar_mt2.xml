@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/oscuro"
+    android:background="@drawable/gradient_light_blue"
     android:orientation="vertical"
     tools:context=".ui.SacarMt2Fragment">
 
@@ -12,9 +12,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="30dp"
-        android:background="@color/black"
-        android:padding="8dp"
-        android:text="Calcular Paredes en Mt2"
+        android:background="@drawable/gradient_title"
+        android:padding="10dp"
+        android:text="@string/calcular_paredes_en_mt2"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="27dp" />
@@ -22,46 +22,47 @@
     <EditText
         android:id="@+id/et_lado_a"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:background="@color/white"
-        android:hint="Lado -A- mas largo encontrado"
+        android:background="@drawable/corner_edit_text"
+        android:hint="@string/lado_a_en_mts"
         android:inputType="number"
-        android:padding="6dp"
+        android:padding="10dp"
         android:textColorHint="@color/black" />
 
     <EditText
         android:id="@+id/et_lado_b"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:background="@color/white"
-        android:hint="Lado -B- mas largo encontrado"
+        android:background="@drawable/corner_edit_text"
+        android:hint="@string/lado_b_en_mts"
         android:inputType="number"
-        android:padding="6dp"
+        android:padding="10dp"
         android:textColorHint="@color/black" />
 
     <EditText
         android:id="@+id/et_alto"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:background="@color/white"
-        android:hint="Alto de la habitacion"
+        android:background="@drawable/corner_edit_text"
+        android:hint="@string/alto_en_mts"
         android:inputType="number"
-        android:padding="6dp"
+        android:padding="10dp"
         android:textColorHint="@color/black" />
 
     <TextView
         android:id="@+id/tv_resultado"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="35dp"
+        android:padding="10dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="35dp"
-        android:background="@color/claro"
-        android:text="0.0 Metros de Trabajo"
+        android:background="@drawable/corner_edit_text"
+        android:text="@string/_0_0_metros_de_trabajo"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="22sp" />
@@ -72,22 +73,23 @@
         android:gravity="center"
         android:orientation="horizontal">
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/bt_borrar"
             android:layout_width="150dp"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:backgroundTint="#ff0000"
-            android:text="Borrar"
+            android:background="@drawable/background_cancel"
+            android:text="@string/borrar"
             android:textColor="@color/white" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/bt_calcular"
             android:layout_width="150dp"
-            android:layout_height="53dp"
+            android:layout_height="wrap_content"
             android:layout_margin="16dp"
+            android:background="@drawable/state_button"
             android:enabled="false"
-            android:text="calcular"
+            android:text="@string/calcular"
             android:textColor="@color/white" />
 
     </LinearLayout>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/medio"
+    android:background="@drawable/gradient_light_blue"
     android:orientation="vertical"
     tools:context=".ui.RespuestaPresupuestoFragment">
 
@@ -18,25 +18,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_marginLeft="3dp"
-            android:layout_marginTop="3dp"
-            android:layout_marginRight="3dp"
-            android:layout_marginBottom="30dp"
-            android:background="@color/black"
-            android:gravity="center"
-            android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="6dp"
-                android:text="Sistema De Presupuesto"
-                android:textColor="@color/white"
-                android:textSize="27sp" />
-        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:padding="8dp"
+            android:background="@drawable/gradient_title"
+            android:text="@string/sistema_de_presupuesto"
+            android:textColor="@color/white"
+            android:textSize="27sp" />
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -49,9 +41,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="3dp"
-                android:background="@color/oscuro"
-                android:padding="6dp"
-                android:text="Presupuesto limpio $"
+                android:background="@drawable/gradient_title"
+                android:padding="8dp"
+                android:text="@string/presupuesto_limpio"
                 android:textColor="@color/white"
                 android:textSize="22sp" />
 
@@ -60,8 +52,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="3dp"
-                android:background="@color/oscuro"
-                android:padding="6dp"
+                android:background="@drawable/gradient_title"
+                android:padding="8dp"
                 android:text=""
                 android:textColor="@color/white"
                 android:textSize="22sp" />
@@ -78,9 +70,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="3dp"
-                android:background="@color/oscuro"
-                android:padding="6dp"
-                android:text="Costo de Combustible $"
+                android:background="@drawable/gradient_title"
+                android:padding="8dp"
+                android:text="@string/costo_de_combustible"
                 android:textColor="@color/white"
                 android:textSize="22sp" />
 
@@ -89,8 +81,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="3dp"
-                android:background="@color/oscuro"
-                android:padding="6dp"
+                android:background="@drawable/gradient_title"
+                android:padding="8dp"
                 android:text=""
                 android:textColor="@color/white"
                 android:textSize="22sp" />
@@ -107,9 +99,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="3dp"
-                android:background="@color/oscuro"
-                android:padding="6dp"
-                android:text="Presupuesto Final $"
+                android:background="@drawable/gradient_title"
+                android:padding="8dp"
+                android:text="@string/presupuesto_final"
                 android:textColor="@color/white"
                 android:textSize="22sp" />
 
@@ -118,8 +110,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="3dp"
-                android:background="@color/oscuro"
-                android:padding="6dp"
+                android:background="@drawable/gradient_title"
+                android:padding="8dp"
                 android:text=""
                 android:textColor="@color/white"
                 android:textSize="22sp" />
@@ -140,9 +132,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="3dp"
-                android:background="@color/oscuro"
-                android:padding="6dp"
-                android:text="Presupuesto final Con Devaluacion"
+                android:background="@drawable/gradient_title"
+                android:padding="8dp"
+                android:text="@string/presupuesto_final_con_devaluacion"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
@@ -152,9 +144,9 @@
                 android:layout_width="300dp"
                 android:layout_height="100dp"
                 android:layout_margin="3dp"
-                android:background="@color/oscuro"
+                android:background="@drawable/gradient_title"
+                android:padding="8dp"
                 android:gravity="center"
-                android:padding="6dp"
                 android:text="32"
                 android:textAlignment="center"
                 android:textColor="@color/white"

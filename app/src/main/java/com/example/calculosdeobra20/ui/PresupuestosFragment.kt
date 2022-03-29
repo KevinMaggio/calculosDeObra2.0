@@ -19,7 +19,6 @@ class PresupuestosFragment : Fragment() {
 
     lateinit var binding: FragmentPresupuestosBinding
     val presupuestoViewModel by activityViewModels<PresupuestoViewModel>()
-    var pase = true
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -27,27 +26,18 @@ class PresupuestosFragment : Fragment() {
     ): View? {
         binding = FragmentPresupuestosBinding.inflate(inflater, container, false)
 
-        //desactivar boton al volver
         presupuestoViewModel.liveValidarBoton.postValue(false)
 
         binding.btCalcular.setOnClickListener {
-            checkNumber(binding.precioMt.text.toString())
-            checkNumber(binding.mtRealizar.text.toString())
-            checkNumber(binding.viaje.text.toString())
-            checkNumber(binding.precioCombustible.text.toString())
-            checkNumber(binding.tiempo.text.toString())
-            if (pase) {
-                presupuesto(
-                    binding.precioMt.text.toString().toDouble().toInt(),
-                    binding.mtRealizar.text.toString().toDouble().toInt(),
-                    binding.viaje.text.toString().toDouble().toInt(),
-                    binding.precioCombustible.text.toString().toDouble().toInt(),
-                    binding.tiempo.text.toString().toDouble().toInt()
-                )
-
-                pasarRespuestaPresupuesto()
-                presupuestoViewModel.presupuestoConDevaluacion(meses())
-            }
+            presupuesto(
+                binding.precioMt.text.toString().toDouble().toInt(),
+                binding.mtRealizar.text.toString().toDouble().toInt(),
+                binding.viaje.text.toString().toDouble().toInt(),
+                binding.precioCombustible.text.toString().toDouble().toInt(),
+                binding.tiempo.text.toString().toDouble().toInt()
+            )
+            pasarRespuestaPresupuesto()
+            presupuestoViewModel.presupuestoConDevaluacion(meses())
         }
         binding.btBorrar.setOnClickListener {
             borrarCampos()
@@ -106,7 +96,6 @@ class PresupuestosFragment : Fragment() {
         }
 
         // seleccion de checkBox
-
         binding.checkDias.setOnClickListener {
             binding.checkAOs.isChecked = false
             binding.checkMeses.isChecked = false
@@ -166,20 +155,4 @@ class PresupuestosFragment : Fragment() {
         var resto = calculosDias(binding.tiempo.text.toString().toDouble().toInt()) / 30
         return resto.toDouble()
     }
-
-    fun checkNumber(valor: String) {
-        try {
-            valor.toInt()
-
-        }catch (e : NumberFormatException){
-            mesageError()
-            binding.btCalcular.isEnabled = false
-            pase = false
-        }
-    }
-
-    fun mesageError() {
-        Toast.makeText(context, "Error en la escritura de Datos", Toast.LENGTH_LONG).show()
-    }
-
 }

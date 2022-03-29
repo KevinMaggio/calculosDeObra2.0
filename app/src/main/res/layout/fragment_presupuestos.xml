@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient_light_blue"
     tools:context=".ui.PresupuestosFragment">
 
     <LinearLayout
@@ -20,8 +21,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="32dp"
-            android:background="@color/oscuro"
-            android:text="Calcular Presupuesto"
+            android:background="@drawable/gradient_title"
+            android:text="@string/calcular_presupuesto"
             android:textAlignment="center"
             android:padding="6dp"
             android:textColor="@color/white"
@@ -30,25 +31,34 @@
         <EditText
             android:id="@+id/mt_realizar"
             android:layout_width="match_parent"
+            android:textColorHint="@color/black"
             android:layout_height="wrap_content"
+            android:background="@drawable/corner_edit_text"
+            android:padding="10dp"
             android:layout_margin="8dp"
-            android:hint="Metros cuadrados a realizar"
+            android:hint="@string/metros_cuadrados_a_realizar"
             android:inputType="number" />
 
         <EditText
             android:id="@+id/precio_mt"
             android:layout_width="match_parent"
+            android:textColorHint="@color/black"
+            android:background="@drawable/corner_edit_text"
+            android:padding="10dp"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:hint="Precio del MT2"
+            android:hint="@string/precio_del_mt2"
             android:inputType="number" />
 
         <EditText
             android:id="@+id/tiempo"
             android:layout_width="match_parent"
+            android:textColorHint="@color/black"
+            android:background="@drawable/corner_edit_text"
+            android:padding="10dp"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:hint="Tiempo de trabajo"
+            android:hint="@string/tiempo_de_trabajo"
             android:inputType="number" />
 
         <LinearLayout
@@ -63,7 +73,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
-                android:text="Dias" />
+                android:text="@string/dias" />
 
             <CheckBox
                 android:id="@+id/check_semanas"
@@ -71,7 +81,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
-                android:text="Semanas" />
+                android:text="@string/semanas" />
 
             <CheckBox
                 android:id="@+id/check_meses"
@@ -79,7 +89,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
-                android:text="Meses" />
+                android:text="@string/meses" />
 
             <CheckBox
                 android:id="@+id/check_años"
@@ -87,7 +97,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
-                android:text="Años" />
+                android:text="@string/a_os" />
         </LinearLayout>
 
         <View
@@ -98,17 +108,23 @@
         <EditText
             android:id="@+id/viaje"
             android:layout_width="match_parent"
+            android:textColorHint="@color/black"
             android:layout_height="wrap_content"
+            android:background="@drawable/corner_edit_text"
+            android:padding="10dp"
             android:layout_margin="8dp"
-            android:hint="Viaje en KM"
+            android:hint="@string/viaje_en_km"
             android:inputType="number" />
 
         <EditText
             android:id="@+id/precio_combustible"
             android:layout_width="match_parent"
+            android:background="@drawable/corner_edit_text"
+            android:textColorHint="@color/black"
+            android:padding="10dp"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:hint="Precio del Lts de combustible "
+            android:hint="@string/precio_del_lts_de_combustible"
             android:inputType="number" />
 
         <LinearLayout
@@ -117,21 +133,24 @@
             android:gravity="center"
             android:orientation="horizontal">
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/bt_borrar"
                 android:layout_width="150dp"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
                 android:layout_margin="16dp"
-                android:backgroundTint="#ff0000"
-                android:text="Borrar" />
+                android:background="@drawable/background_cancel"
+                android:text="@string/borrar" />
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/bt_calcular"
                 android:layout_width="150dp"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
                 android:layout_margin="16dp"
+                android:textColor="@color/white"
                 android:enabled="false"
-                android:text="calcular" />
+                android:background="@drawable/state_button"
+                android:text="@string/calcular" />
 
         </LinearLayout>
 

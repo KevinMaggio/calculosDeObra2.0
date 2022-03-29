@@ -3,11 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/EjerciciosAlkemyAndroid/calculosDeObra/app/src/main/res/drawable/background_cancel.xml" value="0.5703125" />
+        <entry key="..\:/EjerciciosAlkemyAndroid/calculosDeObra/app/src/main/res/drawable/corner_edit_text.xml" value="0.5703125" />
+        <entry key="..\:/EjerciciosAlkemyAndroid/calculosDeObra/app/src/main/res/drawable/gradient_button_blue.xml" value="0.5703125" />
+        <entry key="..\:/EjerciciosAlkemyAndroid/calculosDeObra/app/src/main/res/drawable/gradient_light_blue.xml" value="0.5703125" />
+        <entry key="..\:/EjerciciosAlkemyAndroid/calculosDeObra/app/src/main/res/drawable/gradient_title.xml" value="0.5703125" />
+        <entry key="..\:/EjerciciosAlkemyAndroid/calculosDeObra/app/src/main/res/drawable/state_button.xml" value="0.5703125" />
+        <entry key="..\:/EjerciciosAlkemyAndroid/calculosDeObra/app/src/main/res/layout/activity_main.xml" value="0.5541666666666667" />
         <entry key="..\:/EjerciciosAlkemyAndroid/calculosDeObra/app/src/main/res/layout/fragment_calcular_escalera.xml" value="0.33" />
         <entry key="..\:/EjerciciosAlkemyAndroid/calculosDeObra/app/src/main/res/layout/fragment_calcular_estructura.xml" value="0.3307291666666667" />
         <entry key="..\:/EjerciciosAlkemyAndroid/calculosDeObra/app/src/main/res/layout/fragment_calcular_paredes.xml" value="0.3307291666666667" />
         <entry key="..\:/EjerciciosAlkemyAndroid/calculosDeObra/app/src/main/res/layout/fragment_columnas.xml" value="0.3307291666666667" />
-        <entry key="..\:/EjerciciosAlkemyAndroid/calculosDeObra/app/src/main/res/layout/fragment_construccion_seca.xml" value="0.3307291666666667" />
+        <entry key="..\:/EjerciciosAlkemyAndroid/calculosDeObra/app/src/main/res/layout/fragment_construccion_seca.xml" value="0.33" />
         <entry key="..\:/EjerciciosAlkemyAndroid/calculosDeObra/app/src/main/res/layout/fragment_costo_hormigon.xml" value="0.3307291666666667" />
         <entry key="..\:/EjerciciosAlkemyAndroid/calculosDeObra/app/src/main/res/layout/fragment_costo_material.xml" value="0.3307291666666667" />
         <entry key="..\:/EjerciciosAlkemyAndroid/calculosDeObra/app/src/main/res/layout/fragment_costo_pintura.xml" value="0.3307291666666667" />
@@ -41,7 +48,32 @@
         <entry key="..\:/EjerciciosAlkemyAndroid/calculosDeObra20/app/src/main/res/layout/fragment_resultado_escalera.xml" value="0.3307291666666667" />
         <entry key="..\:/EjerciciosAlkemyAndroid/calculosDeObra20/app/src/main/res/layout/fragment_sacar_mt2.xml" value="0.3307291666666667" />
         <entry key="..\:/EjerciciosAlkemyAndroid/calculosDeObra20/app/src/main/res/layout/fragment_vigas.xml" value="0.3307291666666667" />
+        <entry key="app/src/main/res/drawable/background_cancel.xml" value="0.23385416666666667" />
+        <entry key="app/src/main/res/drawable/gradient_button_blue.xml" value="0.23385416666666667" />
+        <entry key="app/src/main/res/drawable/gradient_light_blue.xml" value="0.23385416666666667" />
+        <entry key="app/src/main/res/drawable/gradient_title.xml" value="0.23385416666666667" />
+        <entry key="app/src/main/res/drawable/state_button.xml" value="0.23385416666666667" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.21770833333333334" />
+        <entry key="app/src/main/res/layout/fragment_calcular_escalera.xml" value="0.21770833333333334" />
+        <entry key="app/src/main/res/layout/fragment_calcular_estructura.xml" value="0.21770833333333334" />
+        <entry key="app/src/main/res/layout/fragment_calcular_paredes.xml" value="0.21770833333333334" />
+        <entry key="app/src/main/res/layout/fragment_columnas.xml" value="0.21770833333333334" />
+        <entry key="app/src/main/res/layout/fragment_construccion_seca.xml" value="0.1780916759186186" />
+        <entry key="app/src/main/res/layout/fragment_costo_hormigon.xml" value="0.21770833333333334" />
+        <entry key="app/src/main/res/layout/fragment_costo_material.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_costo_pintura.xml" value="0.21770833333333334" />
+        <entry key="app/src/main/res/layout/fragment_costo_revoque.xml" value="0.21770833333333334" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.21770833333333334" />
+        <entry key="app/src/main/res/layout/fragment_ladrillos.xml" value="0.21770833333333334" />
+        <entry key="app/src/main/res/layout/fragment_loza.xml" value="0.21770833333333334" />
+        <entry key="app/src/main/res/layout/fragment_loza_clasica.xml" value="0.21770833333333334" />
+        <entry key="app/src/main/res/layout/fragment_loza_viguetas.xml" value="0.21770833333333334" />
+        <entry key="app/src/main/res/layout/fragment_mis_trabajos.xml" value="0.21770833333333334" />
+        <entry key="app/src/main/res/layout/fragment_presupuestos.xml" value="0.21770833333333334" />
+        <entry key="app/src/main/res/layout/fragment_respuesta_presupuesto.xml" value="0.21770833333333334" />
+        <entry key="app/src/main/res/layout/fragment_resultado_escalera.xml" value="0.21770833333333334" />
+        <entry key="app/src/main/res/layout/fragment_sacar_mt2.xml" value="0.21770833333333334" />
+        <entry key="app/src/main/res/layout/fragment_vigas.xml" value="0.21770833333333334" />
       </map>
     </option>
   </component>

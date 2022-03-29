@@ -13,10 +13,18 @@ class CalculosViewModel : ViewModel() {
         liveResultMt.postValue(result)
     }
     fun verificacionBoton(lado: String, lado2: String, alto:String){
-        if(lado.isNotEmpty() && lado2.isNotEmpty() && alto.isNotEmpty()){
+        if(lado.isNotEmpty() && lado2.isNotEmpty() && alto.isNotEmpty() && checkNumber(lado) && checkNumber(lado2) && checkNumber(alto)){
             liveVerifiBoton.postValue(true)
         }else{
             liveVerifiBoton.postValue(false)
+        }
+    }
+    fun checkNumber(valor: String): Boolean {
+        return try {
+            valor.toDouble()
+            valor.toDouble() >= 0
+        } catch (e: NumberFormatException) {
+            false
         }
     }
     fun resetResult(){

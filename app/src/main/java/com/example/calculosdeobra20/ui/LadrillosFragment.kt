@@ -5,16 +5,57 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.core.widget.doAfterTextChanged
+import androidx.fragment.app.activityViewModels
 import com.example.calculosdeobra20.R
+import com.example.calculosdeobra20.databinding.FragmentLadrillosBinding
+import com.example.calculosdeobra20.viewModel.ParedesViewModel
+import java.text.DecimalFormat
 
 class LadrillosFragment : Fragment() {
+
+    private lateinit var binding : FragmentLadrillosBinding
+    val paredesViewModel by activityViewModels<ParedesViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_ladrillos, container, false)
+        binding= FragmentLadrillosBinding.inflate(inflater, container, false)
+        paredesViewModel.liveVerifyError.postValue(false)
+        clear()
+
+        binding.btCalcular.setOnClickListener {
+                paredesViewModel.calculoParedHueco(binding.etMt2.text.toString().toDouble())
+        }
+
+        binding.btCancel.setOnClickListener {
+            clear()
+        }
+        paredesViewModel.livepared.observe(viewLifecycleOwner,{
+            val limitador = DecimalFormat("#0.00")
+
+            binding.twArena.text = limitador.format(it.arena) +"Mt3"
+            binding.twCemento.text= limitador.format(it.cemento) +"Uni"
+            binding.twCal.text= limitador.format(it.cal)+"Uni"
+            binding.twLadrillo.text= it.ladrillo.toInt().toString()+"Uni"
+        })
+        paredesViewModel.liveVerifyError.observe(viewLifecycleOwner,{
+            binding.btCalcular.isEnabled= it
+        })
+        binding.etMt2.doAfterTextChanged {
+            paredesViewModel.validarBoton(it.toString())
+        }
+
+        return binding.root
     }
 
+    fun clear(){
+        binding.etMt2.text.clear()
+        binding.twLadrillo.text="0"
+        binding.twCal.text="0"
+        binding.twCemento.text="0"
+        binding.twArena.text="0"
+    }
 }

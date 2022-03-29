@@ -2,6 +2,7 @@
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/gradient_light_blue"
     android:layout_height="match_parent">
 
     <LinearLayout
@@ -11,69 +12,71 @@
         tools:context=".ui.HomeFragment">
 
         <ImageView
+            android:background="@color/oscuro"
+            android:paddingBottom="6dp"
             android:layout_width="match_parent"
             android:layout_height="211dp"
             android:layout_marginBottom="28dp"
             android:scaleType="fitXY"
             android:src="@drawable/fondo" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/presupuestos"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="60dp"
             android:layout_margin="8dp"
-            android:backgroundTint="@color/oscuro"
-            android:text="presupuestos"
+            android:background="@drawable/gradient_button_blue"
+            android:text="@string/presupuestos"
             android:textColor="@color/white"
             android:textSize="17sp" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/calculos_mt2"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="60dp"
             android:layout_margin="8dp"
-            android:backgroundTint="@color/oscuro"
-            android:text="sacar mt2"
+            android:background="@drawable/gradient_button_blue"
+            android:text="@string/sacar_mt2"
             android:textColor="@color/white"
             android:textSize="17sp" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/costo_material"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="60dp"
             android:layout_margin="8dp"
-            android:backgroundTint="@color/oscuro"
-            android:text="costo material"
+            android:background="@drawable/gradient_button_blue"
+            android:text="@string/costo_material"
             android:textColor="@color/white"
             android:textSize="17sp" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/calculo_escalera"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="60dp"
             android:layout_margin="8dp"
-            android:backgroundTint="@color/oscuro"
-            android:text="calcular escalera"
+            android:background="@drawable/gradient_button_blue"
+            android:text="@string/calcular_escalera_menu"
             android:textColor="@color/white"
             android:textSize="17sp" />
 
-        <Button
-            android:id="@+id/calculo_estructura"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_margin="8dp"
-            android:backgroundTint="@color/oscuro"
-            android:text="calculos estructura"
-            android:textColor="@color/white"
-            android:textSize="17sp" />
-
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/calculos_paredes"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="60dp"
             android:layout_margin="8dp"
-            android:backgroundTint="@color/oscuro"
-            android:text="calculo paredes"
+            android:background="@drawable/gradient_button_blue"
+            android:text="@string/calculo_paredes"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/mis_trabajos"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/gradient_button_blue"
+            android:text="@string/mis_trabajos"
             android:textColor="@color/white"
             android:textSize="17sp" />
     </LinearLayout>

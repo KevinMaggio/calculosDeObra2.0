@@ -1,5 +1,73 @@
-<resources>
-    <string name="app_name">calculosDeObra2.0</string>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">CalculosDeObra</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="calcular_escalera">Calcular escalera</string>
+    <string name="largo_a_trabajar_en_cm">Largo a Trabajar en Cm</string>
+    <string name="alto_a_trabajar_en_cm">Alto a Trabajar en Cm</string>
+    <string name="ancho_a_trabajar_en_cm">Ancho a Trabajar en Cm</string>
+    <string name="cancel">cancel</string>
+    <string name="calcular_estructuras">Calcular estructuras</string>
+    <string name="loza">loza</string>
+    <string name="vigas">vigas</string>
+    <string name="columnas">columnas</string>
+    <string name="calcular_paredes">Calcular paredes</string>
+    <string name="pared_de_ladrillos">Pared de Ladrillos</string>
+    <string name="pared_en_seco">Pared en Seco</string>
+    <string name="calcular_pared_seca">Calcular Pared Seca</string>
+    <string name="montante_a_utilizar">Montante a utilizar</string>
+    <string name="soleras_a_utilizar">Soleras a utilizar</string>
+    <string name="cinta_a_utilizar">Cinta a utilizar</string>
+    <string name="masilla_a_utilizar">Masilla a utilizar</string>
+    <string name="placas_a_utilizar">Placas a utilizar</string>
+    <string name="piedra_a_utilizar">Piedra a utilizar</string>
+    <string name="pintura_a_utilizar">Pintura a utilizar</string>
+    <string name="cemento">Cemento</string>
+    <string name="arena">Arena</string>
+    <string name="cal">Cal</string>
+    <string name="presupuestos">presupuestos</string>
+    <string name="sacar_mt2">sacar mt2</string>
+    <string name="costo_material">costo material</string>
+    <string name="calcular_escalera_menu">calcular escalera</string>
+    <string name="calculo_paredes">calculo paredes</string>
+    <string name="mis_trabajos">Mis Trabajos</string>
+    <string name="calcular_pared_ladrillo">Calcular Pared Ladrillo</string>
+    <string name="mt2_a_trabajar">Mt2 a Trabajar</string>
+    <string name="cemento_a_utilizar">Cemento a utilizar</string>
+    <string name="arena_a_utilizar">Arena a utilizar</string>
+    <string name="ladrillo_a_utilizar">Ladrillo a utilizar</string>
+    <string name="cal_a_utilizar">Cal a utilizar</string>
+    <string name="loza_clasica">Loza Clasica</string>
+    <string name="loza_viguetas">Loza Viguetas</string>
+    <string name="calcular_loza">Calcular Loza</string>
+    <string name="largo_a_trabajar">Largo a Trabajar</string>
+    <string name="calcular_presupuesto">Calcular Presupuesto</string>
+    <string name="metros_cuadrados_a_realizar">Metros cuadrados a realizar</string>
+    <string name="precio_del_mt2">Precio del MT2</string>
+    <string name="tiempo_de_trabajo">Tiempo de trabajo</string>
+    <string name="dias">Dias</string>
+    <string name="semanas">Semanas</string>
+    <string name="meses">Meses</string>
+    <string name="a_os">Años</string>
+    <string name="viaje_en_km">Viaje en KM</string>
+    <string name="precio_del_lts_de_combustible">Precio del Lts de combustible</string>
+    <string name="sistema_de_presupuesto">Sistema De Presupuesto</string>
+    <string name="presupuesto_limpio">Presupuesto limpio $</string>
+    <string name="costo_de_combustible">Costo de Combustible $</string>
+    <string name="presupuesto_final">Presupuesto Final $</string>
+    <string name="presupuesto_final_con_devaluacion">Presupuesto final Con Devaluacion</string>
+    <string name="resultados">Resultados!</string>
+    <string name="cantidad_de_escalones">Cantidad de escalones =</string>
+    <string name="alzada">Alzada =</string>
+    <string name="pisada">Pisada =</string>
+    <string name="cantidad_de_arena">Cantidad de Arena =</string>
+    <string name="cantidad_de_piedra">Cantidad de piedra =</string>
+    <string name="cantidad_de_cemento">Cantidad de cemento =</string>
+    <string name="calcular_paredes_en_mt2">Calcular Paredes en Mt2</string>
+    <string name="lado_a_en_mts">Lado -A- en Mts</string>
+    <string name="lado_b_en_mts">Lado -B- en Mts</string>
+    <string name="alto_en_mts">Alto en Mts</string>
+    <string name="_0_0_metros_de_trabajo">0.0 Metros de Trabajo</string>
+    <string name="borrar">Borrar</string>
+    <string name="calcular">calcular</string>
 </resources>
